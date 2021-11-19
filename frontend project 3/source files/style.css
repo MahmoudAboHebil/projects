@@ -1,0 +1,267 @@
+
+:root{
+    --orange: #ff9500;
+    --white-color: #fff;
+    --black-color:#333;
+    --light-color: rgba(0,0,0,.3);
+}
+
+
+*{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:  .2s linear;
+    box-sizing: border-box;
+}
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7.5rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+html::-webkit-scrollbar-track{
+    background-color: var(--white-color);
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--black-color);
+    border-radius: 5rem;
+}
+section{
+    padding: 1rem 9%;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-size: 1.8rem;
+    padding: .9rem 3.5rem ;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--orange);
+    color: #fff;
+}
+.heading{
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 0.1rem solid var(--light-color);
+    font-size: 3rem;
+    color: var(--black-color);
+    text-transform: uppercase;
+}
+.heading span{
+    color: var(--orange);
+    text-transform: uppercase;
+}
+body{
+    background: #eee;
+}
+.active3{
+    --white-color: #111;
+    --black-color:#fff;
+    --light-color: rgba(255,255,255,.3);
+    background-color: #222;
+}
+/*-----------header--------*/
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white-color);
+    border-bottom: .1rem soild var(--light-color);
+    padding: 1.5rem 9%;
+}
+header .logo{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--black-color);
+    font-size: 3rem
+}
+header .logo span{
+    color: var(--orange);
+}
+header form{
+    display: flex;
+    align-items: center;
+    width: 40rem;
+    border-radius: 5rem;
+    height: 5rem;
+    background-color: var(--black-color);
+    overflow: hidden;
+}
+header form input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    font-size: 1.7rem;
+    color: var(--white-color);
+    padding: 0.2rem;
+    text-transform: none;
+}
+header form label{
+    font-size: 2rem;
+    padding-right: 2rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+header form label:hover{
+    color: var(--orange);
+}
+header .icons div,header .icons a{
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.7rem;
+    line-height: 4rem;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 0.7rem;
+}
+header .icons div:hover,header .icons a:hover{
+    background-color: var(--orange);
+    color: #fff;
+    transform: rotate(360deg);
+}
+header.active{
+    position: fixed;
+    top: 0;left: 0;
+    z-index:100 ;
+}
+/*-----navbar----*/
+.navbar{
+    position: fixed;
+    top: 0;
+    left: -120%;
+    height: 100%;
+    width: 30rem;
+    background: var(--white-color);
+    padding: 3rem;
+}
+.navbar .user{
+    text-align: center;
+    margin: 3rem auto;
+}
+.navbar .user img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    border: .5rem solid var(--white-color);
+    object-fit: cover;
+    box-shadow:  5rem 2rem  0 -3rem var(--orange),
+                 -5rem -2rem  0 -3rem var(--orange),
+                  0    .5rem 1rem rgba(0,0,0,.3);
+}
+.navbar .user h3{
+    padding-top: 0.5rem;
+    color: var(--black-color);
+    font-weight: 500;
+    font-size: 2rem;
+}
+.navbar .links a{
+    display: block;
+    border-bottom: 0.1rem solid var(--light-color);
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    color: var(--black-color);
+}
+.navbar .links a:last-child{
+    border: none;
+}
+.navbar .links a:hover{
+    letter-spacing: 0.2rem;
+    color: var(--orange);
+}
+.navbar #close{
+    position: absolute;
+    top: 1rem; right: 3rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+.navbar #close:hover{
+    color: var(--orange);
+}
+.active2{
+    left: 0;
+    box-shadow: 0 0 0 100vw var(--light-color);
+    z-index: 200;
+}
+/*---------home---------*/
+.home{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+}
+.content{
+    max-width: 450px;
+}
+.home .contect{
+    flex: 1 1 40rem;
+}
+.home .image{
+    flex: 1 1 40rem; text-align: center;
+}
+.home .image img{
+    width: 30vw;
+}
+.home span{
+    color: var(--orange);
+    font-size: 3rem;
+}
+.home h3{
+    color: var(--black-color);
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+/* ------media qureies-------*/
+@media (max-width: 991px){
+    html{
+        font-size:55%;
+    }
+    header{
+        padding: 1.5rem;
+    }
+    .home h3{
+        font-size: 5rem;
+    }
+}
+@media (max-width:768px){
+    header{
+        padding: 1.5rem;
+        flex-flow: column;
+    }
+    header form{
+        width: 100%;
+        margin: 2rem 0;
+    }
+    header .active{
+        transform: translateY(-12.5rem);
+    }
+    .content{
+        text-align: center;
+    }
+    .home .image img{
+        width: 100%;
+    }
+}
+@media (max-width: 450px){
+    html{
+        font-size:50%;
+    }
+  
+}
